@@ -1,24 +1,32 @@
 package javaprgrm;
 
 public class employee {
-	String name;
-	int age;
-	String city;
+	void m1(){
+		String name="Neha";
+		int age=28;
+		String city="ghaziabad";
+		System.out.println("My name is neha");
+		System.out.println(28);
+		System.out.println("My name is ghaziabad");
+		
+	}
+	
+	void m2(){
+	
+		String name="Shweta";
+		int age=29;
+		String city="noida";
+		System.out.println("My name is Shweta");
+		System.out.println(28);
+		System.out.println("My name is Ghaziabad");
+		
+	}
 				
 	
 
 	public static void main(String[] args) {
-		employee e1=new employee();
-		e1.name="The name is Neha";
-		e1.age=28;
-		e1.city="The City is ghaziabad";
-		System.out.println(e1.name);
-		System.out.println(e1.age);
-		System.out.println(e1.city);
-		
-		
-		
-
-	}
+		employee obj=new employee();
+		obj.m1();
+		obj.m2();
 
 }
