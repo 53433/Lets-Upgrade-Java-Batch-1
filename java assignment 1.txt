@@ -1,0 +1,24 @@
+package javaprgrm;
+
+public class employee {
+	String name;
+	int age;
+	String city;
+				
+	
+
+	public static void main(String[] args) {
+		employee e1=new employee();
+		e1.name="The name is Neha";
+		e1.age=28;
+		e1.city="The City is ghaziabad";
+		System.out.println(e1.name);
+		System.out.println(e1.age);
+		System.out.println(e1.city);
+		
+		
+		
+
+	}
+
+}
