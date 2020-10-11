@@ -1,0 +1,107 @@
+Assignment 1
+
+Take 5 subjects marks each subject 100 marks;
+calculate the percentage;
+based on the percentage print the grade and the percentage;
+
+package javaprgrm;
+
+import java.util.Scanner;
+
+public class Totalof5subjects {
+	private static final String Grade = null;
+	private static Scanner sc;
+		public static void main(String[] args) {
+			int english, chemistry, computers, physics, maths; 
+		    float total, Percentage, Average;
+			sc = new Scanner(System.in);
+			
+			System.out.print(" Please Enter the Five Subjects Marks : ");
+			english = sc.nextInt();	
+			chemistry = sc.nextInt();	
+			computers = sc.nextInt();	
+			physics = sc.nextInt();	
+			maths = sc.nextInt();	
+			
+			total = english + chemistry + computers + physics + maths;
+			Average = total / 5;
+		    Percentage = (total / 500) * 100;
+		    
+		    System.out.println(" Total Marks =  " + total);
+		    System.out.println(" Average Marks =  " + Average);
+		    System.out.println(" Marks Percentage =  " + Percentage);
+		    System.out.print("The student Grade is: ");
+	        if(Average>=80)
+	        {
+	            System.out.print("A");
+	        }
+	        else if(Average>=60 && Average<80)
+	        {
+	           System.out.print("B");
+	        } 
+	        else if(Average>=40 && Average<60)
+	        {
+	            System.out.print("C");
+	        }
+	        else
+	        {
+	            System.out.print("D");
+	        }
+		    
+		}
+
+	}
+
+
+
+Assignment 2
+
+Take employee name,date of birth,month of birth
+birth year, monthly salary;
+5l - 20%;
+4l - 15%;
+3l- 10%;
+2l -5%;
+Display name,age,annual salary and the tax amount
+
+Solution
+
+package javaprgrm;
+
+import java.util.Scanner;
+public class calculateamounttax {
+	
+	public static void main(String[] args) {
+	
+		 Scanner in = new Scanner(System.in);
+	        System.out.print("Enter Name: ");
+	        String name = in.nextLine();
+	        System.out.print("Enter age: ");
+	        int age = in.nextInt();
+	        System.out.print("Enter taxable income: ");
+	        double ti = in.nextDouble();
+	        double tax = 0.0;
+
+	        if (age > 60) {
+	            System.out.print("Wrong Category");
+	        }
+	        else {
+	            if (ti <= 250000)
+	                tax = 0;
+	            else if (ti <= 500000)
+	                tax = (ti - 160000) * 10 / 100;
+	            else if (ti <= 1000000)
+	                tax = 34000 + ((ti - 500000) * 20 / 100);
+	            else
+	                tax = 94000 + ((ti - 1000000) * 30 / 100);
+	        }
+	        
+	        System.out.println("Name: " + name);
+	        System.out.println("Tax Payable: " + tax);
+	    }
+	}
+
+
+
+
+
