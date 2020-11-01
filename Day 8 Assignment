@@ -1,1 +1,166 @@
+Question 1:
+Create a parent class for different employees with common details name, age, salary,
+designation, and methods to get details and display details.
 
+
+  
+import java.util.Scanner;
+public class Employee {
+protected String name;
+protected	int age;
+protected	double sal;
+protected	String desg;
+Scanner sc=new Scanner(System.in);
+	void getdetails() {
+		System.out.println(" Enter Employee details \n Enter Name");
+		this.name=sc.nextLine();
+		System.out.println(" Enter Designation");
+		this.desg=sc.next();
+		sc.nextLine();
+		System.out.println("  Enter age");
+		this.age=sc.nextInt();
+		sc.nextLine();
+		System.out.println(" Enter Salary");
+		this.sal=sc.nextDouble();
+		//System.out.println(" Executed ");
+		}
+	void displaydetails() {
+		System.out.println("-------------------------------");
+		System.out.println("Name :"+ this.name);
+		System.out.println("Age : "+ this.age);
+		System.out.println("Salary : "+ this.sal);
+		System.out.println("Designation : "+ this.desg);
+	}
+}
+
+
+Question 2:
+Create three child classes one for the doctor, one for an engineer, and one for pilots and include
+their different operations in respective classes.
+
+public class Doctor extends Employee{
+private	int no_of_surgery_conducted;
+private	String speciality;
+	void getdetails1() {
+		System.out.println("Enter speciality ");
+		this.speciality=sc.nextLine();
+		sc.nextLine();
+		System.out.println("Enter no of operations conducted");
+		this.no_of_surgery_conducted=sc.nextInt();
+	
+	}
+	void displaydetails1() {
+		System.out.println("No. of surgery :"+this.no_of_surgery_conducted);
+		System.out.println("Speciality:"+this.speciality);
+	
+	}
+}
+
+
+public class Engineer extends Employee{
+private	String Stream;
+private int no_of_projects_workedon;
+void getdetails1() {
+	System.out.println("Enter no of projects worked on ");
+	this.no_of_projects_workedon=sc.nextInt();
+	sc.nextLine();
+	System.out.println("Enter Stream");
+	this.Stream=sc.nextLine();
+
+}
+void displaydetails1() {
+	System.out.println("-------------------------------");
+	System.out.println(" Stream :"+this.Stream);
+	System.out.println(" No of projects worked on :"+this.no_of_projects_workedon);
+	System.out.println("-------------------------------");
+}
+}
+
+public class Pilot extends Employee  {
+private int No_of_flights;
+private String Type_of_airliner;
+void getdetails1() {
+	System.out.println("Enter type of airliner");
+	this.Type_of_airliner=sc.nextLine();
+	sc.nextLine();
+	System.out.println("Enter No of flights");
+	this.No_of_flights=sc.nextInt();
+
+}
+void displaydetails1() {
+	System.out.println("No of flight :"+this.No_of_flights);
+	System.out.println("Type of airliner:"+this.Type_of_airliner);
+}
+}
+
+
+
+
+Question 3:
+In the main method create an array of objects for three of them get the details and print for all the
+objects
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee [] ar1=new Employee[3];
+		for(int i=0;i<=2;i++) {
+			ar1[i]=new Employee();
+			ar1[i].getdetails();
+		}
+	
+		for(int i=0;i<=2;i++) {
+			ar1[i].displaydetails();
+		}	
+
+	}
+	
+
+}
+
+
+Question 4
+
+Array of 3 objects for each type of employee
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Engineer [] ar1=new Engineer[3];
+		Doctor [] ar2=new Doctor[3];
+		Pilot [] ar3=new Pilot[3];
+		for(int i=0;i<=2;i++) {
+			ar1[i]=new Engineer();
+			ar1[i].getdetails();
+			ar1[i].getdetails1();
+			
+		}
+		for(int i=0;i<=2;i++) {
+			ar2[i]=new Doctor();
+			ar2[i].getdetails();
+			ar2[i].getdetails1();
+			
+		}
+		for(int i=0;i<=2;i++) {
+			ar3[i]=new Pilot();
+			ar3[i].getdetails();
+			ar3[i].getdetails1();
+			
+		}
+	
+		for(int i=0;i<1;i++) {
+			ar1[i].displaydetails();
+			ar1[i].displaydetails1();
+			ar2[i].displaydetails();
+			ar2[i].displaydetails1();
+			ar3[i].displaydetails();
+			ar3[i].displaydetails1();
+		}	
+
+	}
+	
+
+}
